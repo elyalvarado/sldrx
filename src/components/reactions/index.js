@@ -55,20 +55,26 @@ export default class App extends Component {
 
   // Gets the count of how many reactions for the emoji the user has
   getCount  = async (emoji) => {
+    let count
+    // console.debug(`getCount ${emoji}`,'Called')
     // If the user is logged in query firebase database
     // else call again after waiting 1 second
     if(this.state.user) { 
+      // console.debug(`getCount ${emoji}`,'User logged in')
       const url = `${this.props.databaseURL}/reactions/${emoji}.json?orderBy="userId"&equalTo="${this.state.user.localId}"`
       const response = await fetch(url)
       const data = await response.json()
-      const count = Object.keys(data).length
-      return count
+      count = Object.keys(data).length
+      // console.debug(`getCount ${emoji}`,`Count: ${count}`)
     } else {
+      // console.debug(`getCount ${emoji}`,'User not yet logeed in. Sleeping 1s')
       const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
       await sleep(1000)
-      const count = await this.getCount(emoji)
-      return count
+      // console.debug(`getCount ${emoji}`,'Done sleeping. Calling again')
+      count = await this.getCount(emoji)
+      // console.debug(`getCount ${emoji}`,`After Calling again Count: ${count}`)
     }
+    return count
   }
 
   // Adds a new reaction object to the emoji tree
