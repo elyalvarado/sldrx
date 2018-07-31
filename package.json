@@ -26,7 +26,7 @@
     "node-sass": "^4.9.2",
     "preact-cli": "^2.0.2",
     "preact-render-to-string": "^3.7.0",
-    "preact-widget-scripts": "^0.6.0",
+    "preact-widget-scripts-async-to-promises": "^0.1.0",
     "sass-loader": "^6.0.6"
   },
   "dependencies": {
