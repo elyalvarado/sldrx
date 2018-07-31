@@ -1,4 +1,4 @@
-// let poly = require("preact-cli/lib/lib/webpack/polyfills");
+let poly = require("preact-cli/lib/lib/webpack/polyfills");
 
 import { h } from "preact";
 import habitat from "preact-habitat";
