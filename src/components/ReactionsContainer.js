@@ -11,7 +11,7 @@ const style = {
   fontSize: '30px',
 }
 
-export default class SlideReactions extends Component {
+export default class ReactionsContainer extends Component {
 
   render(props) {
     const childProps = { handleClick: props.handleClick, getCount: props.getCount }

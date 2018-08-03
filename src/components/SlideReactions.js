@@ -1,5 +1,5 @@
 import { h, Component } from "preact";
-import SlideReactions from './SlideReactions'
+import ReactionsContainer from './ReactionsContainer'
 import Reaction from './reaction'
 // import "./style.scss";
 
@@ -104,11 +104,11 @@ export default class App extends Component {
 
   render(props) {
     return (
-      <SlideReactions handleClick={this.handleClick} getCount={this.getCount} >
+      <ReactionsContainer handleClick={this.handleClick} getCount={this.getCount} >
         <Reaction>👍</Reaction>
         <Reaction>🤔</Reaction>
         <Reaction>😡</Reaction>
-      </SlideReactions>
+      </ReactionsContainer>
     );
   }
 }

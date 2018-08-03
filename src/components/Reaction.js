@@ -1,5 +1,5 @@
 import { h, Component } from "preact"
-import styles from './reaction.scss'
+import styles from './Reaction.scss'
 
 export default class Reaction extends Component {
   currentUpdater = null
