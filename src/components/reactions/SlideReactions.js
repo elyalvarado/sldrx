@@ -1,5 +1,4 @@
 import { h, cloneElement, Component } from "preact";
-// import "./style.scss";
 
 const style = {
   position: 'fixed',

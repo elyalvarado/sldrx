@@ -1,28 +1,10 @@
-import { h, Component } from "preact";
-
-const style = {
-  cursor: 'pointer',
-  border: '1px red solid',
-  padding: '2px 10px 0px',
-  borderRadius: '5px',
-  margin: '3px',
-}
-
-const hoverStyle = {
-  ...style,
-  backgroundColor: 'gray'
-}
+import { h, Component } from "preact"
+import styles from './reaction.scss'
 
 export default class Reaction extends Component {
   currentUpdater = null
   state = {
-    hover: false,
     clickCount: 0,
-  }
-
-  // Updates the hover state depending on the type of the passed event
-  handleFocus = (event) => {
-    this.setState({ hover: event.type == 'mouseover' })
   }
 
   // Updates the count synchronously, calls the passed click handler and schedules a refresh from the database
@@ -30,6 +12,7 @@ export default class Reaction extends Component {
     this.setState({ clickCount: this.state.clickCount + 1 })
     this.props.handleClick(this.props.children[0])
     this.refreshCount()
+    return true
   }
 
   // This is a dampened way of calling the RT version of the same method only once every half second
@@ -56,15 +39,13 @@ export default class Reaction extends Component {
 
   render(props) {
     return(
-      <span 
-        style={this.state.hover ? hoverStyle : style}
-        onMouseOver={this.handleFocus}
-        onMouseOut={this.handleFocus}
+      <button 
+        className={styles.reactionButton}
         onClick={this.handleClick}
       >
-        {props.children}
-        <span>{this.state.clickCount}</span>
-      </span>
+        <span className={styles.reactionEmoji}>{props.children}</span>
+        <span className={styles.reactionNumber}>{this.state.clickCount}</span>
+      </button>
     )
   }
 }
