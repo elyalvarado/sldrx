@@ -46,8 +46,8 @@ export default class SlideReactionsMaster extends Component {
   }
 
   componentDidMount() {
-    const source = new EventSource(`${this.props.databaseURL}/reactions.json`);
-    source.addEventListener("put", this.parsePutEvent, false);
+    const source = new EventSource(`${this.props.databaseURL}/reactions.json`)
+    source.addEventListener("put", this.parsePutEvent, false)
     this.setState({ source })
   }
 

@@ -1,4 +1,4 @@
-import { h, cloneElement, Component } from "preact";
+import { cloneElement } from 'preact'
 
 const style = {
   fontSize: '30px',

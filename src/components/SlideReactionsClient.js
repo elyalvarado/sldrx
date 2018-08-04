@@ -1,4 +1,4 @@
-import { h, Component } from "preact";
+import { h, Component } from 'preact'
 import ReactionsContainer from './ReactionsContainer'
 import Reaction from './reaction'
 
@@ -120,7 +120,7 @@ export default class SlideReactionsClient extends Component {
           <Reaction>😡</Reaction>
         </ReactionsContainer>
       </div>
-    );
+    )
   }
 }
 
