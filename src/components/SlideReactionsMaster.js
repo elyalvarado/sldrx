@@ -10,7 +10,7 @@ export default class SlideReactionsMaster extends Component {
   }
 
   syncState = (data) => {
-    console.log('sync', data)
+    // console.log('sync', data)
     if(!data) { return }
     let syncedReactions = {}
     Object.keys(data).map(
@@ -20,7 +20,7 @@ export default class SlideReactionsMaster extends Component {
   }
 
   updateState = (data) => {
-    console.log('update', data)
+    // console.log('update', data)
     const incoming = data.path.split("/")
     incoming.shift() // Remove empty string from 1st slash in the path
     incoming.push(data.data.timestamp)
@@ -38,7 +38,7 @@ export default class SlideReactionsMaster extends Component {
   }
 
   parsePutEvent = (event) => {
-    console.log('event',event)
+    // console.log('event',event)
     const data = JSON.parse(event.data)
     data.path === '/'
       ? this.syncState(data.data)

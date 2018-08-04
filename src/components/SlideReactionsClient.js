@@ -45,7 +45,7 @@ export default class SlideReactionsClient extends Component {
   // else sign up as a new user
   signupOrRefreshAuth = async () => {
     const refreshToken = localStorage.getItem(REFRESH_TOKEN_KEY)
-    if(refreshToken) {
+    if(refreshToken && refreshToken !== "undefined") {
       this.refreshAuth()
     } else {
       this.signupNewUser()
@@ -86,13 +86,13 @@ export default class SlideReactionsClient extends Component {
 
   // Makes sure the user is logged in and calls increment, else waits 1s before calling itself again
   handleClick = (emoji) => {
-    console.log('handleClick', emoji)
+    // console.log('handleClick', emoji)
     if(this.state.user) {
-      console.log('handleClick','User logged in, incrementing counter')
+      // console.log('handleClick','User logged in, incrementing counter')
       this.increment(emoji)
     } else {
       // Wait 1sec and try to call again
-      console.log('handleClick','User not yet logged in, waiting 1s to retry')
+      // console.log('handleClick','User not yet logged in, waiting 1s to retry')
       setTimeout(() => this.handleClick(emoji), 1000)
     }
   }
