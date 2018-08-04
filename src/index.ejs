@@ -31,8 +31,8 @@
   <div data-widget-sldrx="master" class="preview">
     <script type="text/props">
       {
-        "apiKey": "***REMOVED***",
-        "databaseURL": "***REMOVED***",
+        "apiKey": "<%= process.env.FIREBASE_API_KEY %>",
+        "databaseURL": "<%= process.env.FIREBASE_DB_URL %>",
         "fontSize": "30px"
       }
     </script>
@@ -41,8 +41,8 @@
   <div data-widget-sldrx="client" class="preview">
     <script type="text/props">
       {
-        "apiKey": "***REMOVED***",
-        "databaseURL": "***REMOVED***",
+        "apiKey": "<%= process.env.FIREBASE_API_KEY %>",
+        "databaseURL": "<%= process.env.FIREBASE_DB_URL %>",
         "fontSize": "30px"
       }
     </script>

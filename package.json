@@ -14,6 +14,7 @@
   "author": "Ely Alvarado <elyalvarado@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "dotenv": "^6.0.0",
     "eslint": "^4.5.0",
     "identity-obj-proxy": "^3.0.0",
     "if-env": "^1.0.0",
