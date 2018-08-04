@@ -1,5 +1,5 @@
 .bubbles { 
-  width: 6em;
+  width: 2em;
   font-size: 2em;
   position: fixed;
   right: 0;
@@ -9,7 +9,7 @@
   z-index: 99;
   display: flex;
   align-items: flex-end;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .bubble {
@@ -28,14 +28,14 @@
 }
 
 @-webkit-keyframes moveclouds { 0% { top: 100vh; } 100% { top: 25vh; } }
-@-webkit-keyframes sideWays { 0% { margin-right:0px; } 100% { margin-right:50px; } }
-@-webkit-keyframes sideWaysAlt { 0% { margin-right:50px; } 100% { margin-right:0px; } }
+@-webkit-keyframes sideWays { 0% { margin-left:0; } 100% { margin-left:1em; } }
+@-webkit-keyframes sideWaysAlt { 0% { margin-left:1em; } 100% { margin-left:0; } }
 @-webkit-keyframes fadeout { 0% { opacity: 1; } 100% { opacity: 0; } }
 @-moz-keyframes moveclouds {     0% { top: 100vh; } 100% { top: -200px; } }
-@-moz-keyframes sideWays { 0% { margin-right:0px; } 100% { margin-right:50px; } }
-@-moz-keyframes sideWaysAlt { 0% { margin-right:50px; } 100% { margin-right:0px; } }
+@-moz-keyframes sideWays { 0% { margin-left:0; } 100% { margin-left:1em; } }
+@-moz-keyframes sideWaysAlt { 0% { margin-left:1em; } 100% { margin-left:0; } }
 @-moz-keyframes fadeout { 0% { opacity: 1; } 100% { opacity: 0; } }
 @-o-keyframes moveclouds { 0% { top: 100vh; } 100% { top: -200px; } }
-@-o-keyframes sideWays { 0% { margin-right:0px; } 100% { margin-right:50px; } }
-@-o-keyframes sideWaysAlt { 0% { margin-right:50px; } 100% { margin-right:0px; } }
+@-o-keyframes sideWays { 0% { margin-left:0; } 100% { margin-left:1em; } }
+@-o-keyframes sideWaysAlt { 0% { margin-left:1em; } 100% { margin-left:0; } }
 @-o-keyframes fadeout { 0% { opacity: 1; } 100% { opacity: 0; } }
