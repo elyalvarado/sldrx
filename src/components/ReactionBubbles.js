@@ -1,7 +1,7 @@
 import styles from './ReactionBubbles.scss'
 
 const ReactionBubbles = (props) => (
-  <div className={styles.bubbles} style={{width: '180px', fontSize: '60px'}}>
+  <div className={styles.bubbles} >
     {
       props.incomingReactions.map(r => 
         (

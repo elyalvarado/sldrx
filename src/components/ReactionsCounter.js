@@ -4,7 +4,6 @@ import ReactionButton from './ReactionButton'
 const noop = () => {}
 
 const style = {
-  fontSize: '30px',
   position: 'fixed',
   bottom: 0,
   left: 0,

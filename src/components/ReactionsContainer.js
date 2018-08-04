@@ -1,7 +1,6 @@
 import { cloneElement } from 'preact'
 
 const style = {
-  fontSize: '30px',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
