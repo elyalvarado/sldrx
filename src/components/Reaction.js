@@ -1,5 +1,5 @@
 import { h, Component } from "preact"
-import styles from './Reaction.scss'
+import ReactionButton from './ReactionButton'
 
 export default class Reaction extends Component {
   currentUpdater = null
@@ -39,13 +39,7 @@ export default class Reaction extends Component {
 
   render(props) {
     return(
-      <button 
-        className={styles.reactionButton}
-        onClick={this.handleClick}
-      >
-        <span className={styles.reactionEmoji}>{props.children}</span>
-        <span className={styles.reactionNumber}>{this.state.clickCount}</span>
-      </button>
+      <ReactionButton handleClick={this.handleClick} emoji={props.children} count={this.state.clickCount} />
     )
   }
 }

@@ -1,16 +1,16 @@
 .reactionButton {
+  width: 100px;
+  color: '#aaa';
   cursor: pointer;
   background-color: transparent;
   border: 1px solid #e1e4e7;
+  font-size: 1em;
   padding: calc(0.3vw + 1px) calc(1vw + 1px);
   margin: 5px 0.3vw;
   border-radius: 5px;
-  font-size: 30px;
   font-family: "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", "TeXGyreHerosCnBold", "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
   font-stretch: condensed;
-  color: '#aaa';
   display: flex;
-  flex-basis: 100px;
   align-items: center;
   justify-content: space-around;
 }
