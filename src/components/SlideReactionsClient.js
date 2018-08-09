@@ -1,6 +1,7 @@
 import { h, Component } from 'preact'
 import ReactionsContainer from './ReactionsContainer'
 import Reaction from './reaction'
+import { Emojis } from './SlideReactions'
 
 const REFRESH_TOKEN_KEY = 'refreshToken'
 
@@ -113,12 +114,12 @@ export default class SlideReactionsClient extends Component {
       justifyContent: 'center'
     }
 
+    const emojis = props.emojis ? props.emojis : Emojis
+
     return (
       <div style={style}>
         <ReactionsContainer handleClick={this.handleClick} getCount={this.getCount} >
-          <Reaction>👍</Reaction>
-          <Reaction>🤔</Reaction>
-          <Reaction>😡</Reaction>
+          {emojis.map(emoji => <Reaction>{emoji}</Reaction>)}
         </ReactionsContainer>
       </div>
     )
