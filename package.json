@@ -1,16 +1,16 @@
 {
-  "name": "slide-reactions",
+  "name": "sldrx",
   "version": "0.2.0",
   "description": "HTML/JS Widget to add user reactions to any online presentation/page",
   "source": "components/reactions/index.js",
-  "main": "dist/slide-reactions.js",
+  "main": "dist/sldrx.js.gx",
   "scripts": {
     "test": "NODE_ENV=test jest",
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
     "build": "preact build --no-prerender --clean --template src/index.ejs --service-worker false",
     "serve": "npm run build && preact serve",
     "dev": "preact watch --template src/index.ejs",
-    "dist": "npm run build && rimraf dist/ && mkdir -p dist && cp build/bundle.js dist/slide-reactions.js && gzip -k dist/slide-reactions.js"
+    "dist": "npm run build && rimraf dist/ && mkdir -p dist && cp build/bundle.js dist/sldrx.js && gzip -k dist/sldrx.js"
   },
   "keywords": ["widget", "reveal.js", "preact"],
   "author": "Ely Alvarado <elyalvarado@gmail.com>",
