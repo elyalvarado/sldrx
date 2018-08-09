@@ -67,7 +67,7 @@ export default class SlideReactionsMaster extends Component {
   render(props) {
     return (
       <div style={{fontSize: props.fontSize ? props.fontSize : '30px'}}>
-        <ReactionsCounter reactions={this.state.reactions} />
+        <ReactionsCounter reactions={this.state.reactions} url={props.url}/>
         <ReactionBubbles incomingReactions={this.state.incomingReactions} />
       </div>
     )

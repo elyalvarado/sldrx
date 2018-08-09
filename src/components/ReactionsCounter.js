@@ -11,11 +11,12 @@ const style = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
+  fontFamily: '"HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", "TeXGyreHerosCnBold", "Helvetica", "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif',
 }
 
 const ReactionsCounter = (props) => (
   <div style={style}>
-    <div>SldRX</div>
+    <div>{props.url || 'SldRX'}</div>
     <ReactionsContainer handleClick={noop} >
       {Object.keys(props.reactions).map(
         emoji => (
