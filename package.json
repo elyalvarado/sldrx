@@ -1,9 +1,9 @@
 {
   "name": "sldrx",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "HTML/JS Widget to add user reactions to any online presentation/page",
   "source": "components/reactions/index.js",
-  "main": "dist/sldrx.js.gz",
+  "main": "dist/sldrx.js",
   "scripts": {
     "test": "NODE_ENV=test jest",
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
