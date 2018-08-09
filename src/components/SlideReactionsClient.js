@@ -105,6 +105,8 @@ export default class SlideReactionsClient extends Component {
   render(props) {
     const style={
       fontSize: props.fontSize ? props.fontSize : '30px',
+    }
+    const fixedStyle = {
       position: 'fixed',
       bottom: 0,
       left: 0,
@@ -113,11 +115,12 @@ export default class SlideReactionsClient extends Component {
       alignItems: 'center',
       justifyContent: 'center'
     }
+    const styles = props.display !== "inline" ? { ...style, ...fixedStyle } : style
 
     const emojis = props.emojis ? props.emojis : Emojis
 
     return (
-      <div style={style}>
+      <div style={styles}>
         <ReactionsContainer handleClick={this.handleClick} getCount={this.getCount} >
           {emojis.map(emoji => <Reaction>{emoji}</Reaction>)}
         </ReactionsContainer>
