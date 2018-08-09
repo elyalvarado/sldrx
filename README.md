@@ -46,13 +46,16 @@ The following additional props can be passed to customize the widget:
 #### emojis
 
 > "emojis": ["🦄", "🤯", "❤️", "🤔"]
+
 If not passed emojis used for the reactions are: 👍, 🤔 and 😡. 
 
 #### fontSize
 
 > "fontSize": "20px"
+
 The default font size is 30px
 
 #### url
 > "url": "http://google.co"
+
 The text to display on the bottom left corner of the widget. By default it displays 'SldRX'
